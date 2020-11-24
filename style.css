@@ -23,6 +23,10 @@ body {
 
 }
 
+#Info h1 {
+	font-family: 'Righteous';
+}
+
 span span {
 	font-size: 20px;
 	width: 30px;
