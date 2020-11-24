@@ -1,4 +1,4 @@
 # ManachersAlgorithm
 
-Design/Layout Development: Laura Neff
+Design/Layout Development: Laura Neff;
 Algorithm Visuals: Peter Liu
