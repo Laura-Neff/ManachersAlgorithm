@@ -10,11 +10,25 @@ li {
 
 }
 
+body {
+	background-image: url("images/background.png");
+}
+
+.jumbotron {
+    /*background-image: url("images/background.png");*/
+    /*color:chartreuse;*/
+    width: 90%;
+    margin: 2%;
+    margin-top: 3%;
+
+}
+
 span span {
 	font-size: 20px;
 	width: 30px;
 	padding: 5px;
 	text-align: center;
+	/*color: blue;*/
 }
 
 .lps {
@@ -27,4 +41,11 @@ span span {
 
 .blank_div {
 	height: 10px;
+	color: blue;
 }
+
+input {
+	margin: 1%;
+	color: blue;
+}
+
