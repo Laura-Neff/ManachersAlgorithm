@@ -27,6 +27,10 @@ body {
 	font-family: 'Righteous';
 }
 
+nav {
+	font-family: 'Righteous';
+}
+
 #Info {
 	background-image: url("images/green_dust.png");
 	/*color: chartreuse;*/
@@ -56,5 +60,16 @@ span span {
 input {
 	margin: 1%;
 	color: blue;
+}
+
+footer {
+	background-color: #343a40;
+	font-family: 'Righteous';
+	font-size: 20px;
+	padding: 20px;
+	color: white;
+	height: 8em;
+	
+	
 }
 
