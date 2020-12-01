@@ -19,7 +19,7 @@ body {
     /*color:chartreuse;*/
     width: 70%;
     margin: 5%;
-	margin-top: 3%;
+		margin-top: 3%;
 	
 
 }
@@ -30,6 +30,10 @@ h1 {
 
 nav {
 	font-family: 'Righteous';
+}
+
+#InfoContain {
+	/* width: 70%; */
 }
 
 #Info {
