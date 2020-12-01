@@ -17,8 +17,8 @@ body {
 .jumbotron {
     /*background-image: url("images/background.png");*/
     /*color:chartreuse;*/
-    width: 90%;
-    margin: 2%;
+    width: 70%;
+    margin: 5%;
     margin-top: 3%;
 
 }
@@ -33,6 +33,8 @@ nav {
 
 #Info {
 	background-image: url("images/green_dust.png");
+	width: 70%;
+	padding: 3%;
 	/*color: chartreuse;*/
 }
 
@@ -63,8 +65,14 @@ input {
 }
 
 #initialArray {
-	width: 50%;
+	width: 60%;
 	margin:3%;
+	padding: 3%;
+	background-color:seagreen;
+}
+
+p {
+	/*padding-right: 20%;*/
 }
 
 footer {

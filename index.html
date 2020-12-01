@@ -18,29 +18,32 @@
 			<div class="jumbotron" id="Info">
 					<h1 class="display-4">Manacher's Algorithm</h1>
 					<p class="lead">Manacher's Algorithm finds the longest palindromic substring in O(N) time compared to O(N<sup>2</sup>) time in dynamic programming.
-						The way it reduces the number of operations performed is by doing some extra analysis when two halves of a center are equal.  </p>
-
-						<img id = "initialArray" src="images/ShowArray.png">
-
+						The way it reduces the number of operations performed is by doing some extra analysis when two halves of a center are equal.</p>
+						
+						<p class="lead">In dynamic programming, a variable representing the center is iterated on each element in the array and "between" each two elements in an array.
+						Palindromes are found by using the center variable to determine whether the elements on both sides of the center are the same or not for each element in the array. 
+						When we say "between", we mean that the algorithm is checking to see if the characters up to a certain iteration can be read the same backwards, 
+						rather than seeing if the elements on both sides of the center are the same.   </p>
+				
+						<img id = "initialArray" src="images/ShowArrayGray.png">
+						
 						<p class="lead">
 								 
 						Like in dynamic programming, Manacher's Algorithm also uses a center variable for the array with the palindrome to determine whether elements are the same on both sides of it, but it does not iterate the center variable for each element in the array. When the left half is equal to the right half of a center, the right half is said to be the "mirror" of the left. 
 						 Now the center of the left half is found and the palindrome length of the newly found center is duplicated as the palindrome 
 						 length of the corresponding center on the right half. The rest of the palindrome lengths for when the center is each of the remaining
 							elements on the left half is duplicated over to the corresponding elements on the right half. </p>
+							<img id = "initialArray" src="images/MirrorGray.png">
 						<p class="lead">	However, this is only true when the length  of the mirror (the length of the palindrome at an index) is within the left boundary.</p>
-							
+						<img id = "initialArray" src="images/BoundariesGray.png">
 						<p class="lead"> If the length of the mirror goes beyond the left boundary
-							 (say the left half is "MOMO" and the right half is "MOM"), then the palindrome lengths at each center on the right half would be equal to the 
-							 right boundary - that center's index. The center's index treats the empty spaces between each element like their own index. 
-							 Therefore, these two techniques reduce the amount of expansions needed in finding the longest palindromic substring, thus reducing time complexity, and giving us Manacher's Algorithm. 
-						
-
-					</p>
+							 (say the left half is "OMOM" and the right half is "MOM"), then the palindrome lengths at each center on the right half would be equal to the 
+							 right boundary - that center's index. The center's index treats the empty spaces between each element like their own indices. 
+							 Therefore, these two techniques reduce the amount of expansions needed in finding the longest palindromic substring, thus reducing time complexity, and giving us Manacher's Algorithm. </p>
+							 <img id = "initialArray" src="images/FinalExplanationGray.png">
 					<hr class="my-4">
-					<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-					<p class="lead">
-					  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+					<p class="lead" style="color: seagreen; font-size: 30px; font-family: 'Righteous'"> Please try out our demo below, which finds the longest palindrome using Manacher's Algorithm for every input and shows you
+						each step in calculation.
 					</p>
 				  </div>
 
@@ -56,7 +59,7 @@
 
 
 		<footer>
-			<p> Design Development: Laura Neff</p>
+			<p> Design Development and Figure Explanation: Laura Neff</p>
 			<p> Algorithm Display: Peter Liu</p>
 		</footer>
 
