@@ -25,7 +25,7 @@
 						When we say "between", we mean that the algorithm is checking to see if the characters up to a certain iteration can be read the same backwards, 
 						rather than seeing if the elements on both sides of the center are the same.   </p>
 				
-						<img id = "initialArray" src="images/ShowArrayGray.png">
+						<img id = "initialArray" src="images/ShowArray.png">
 						
 						<p class="lead">
 								 
@@ -33,14 +33,14 @@
 						 Now the center of the left half is found and the palindrome length of the newly found center is duplicated as the palindrome 
 						 length of the corresponding center on the right half. The rest of the palindrome lengths for when the center is each of the remaining
 							elements on the left half is duplicated over to the corresponding elements on the right half. </p>
-							<img id = "initialArray" src="images/MirrorGray.png">
+							<img id = "initialArray" src="images/Mirror.png">
 						<p class="lead">	However, this is only true when the length  of the mirror (the length of the palindrome at an index) is within the left boundary.</p>
-						<img id = "initialArray" src="images/BoundariesGray.png">
+						<img id = "initialArray" src="images/Boundaries.png">
 						<p class="lead"> If the length of the mirror goes beyond the left boundary
 							 (say the left half is "OMOM" and the right half is "MOM"), then the palindrome lengths at each center on the right half would be equal to the 
 							 right boundary - that center's index. The center's index treats the empty spaces between each element like their own indices. 
 							 Therefore, these two techniques reduce the amount of expansions needed in finding the longest palindromic substring, thus reducing time complexity, and giving us Manacher's Algorithm. </p>
-							 <img id = "initialArray" src="images/FinalExplanationGray.png">
+							 <img id = "initialArray" src="images/FinalExplanation.png">
 					<hr class="my-4">
 					<p class="lead" style="color: seagreen; font-size: 30px; font-family: 'Righteous'"> Please try out our demo below, which finds the longest palindrome using Manacher's Algorithm for every input and shows you
 						each step in calculation.
@@ -48,10 +48,55 @@
 				  </div>
 
 				  <div class="jumbotron">
+							<h1 class="display-4">Demo Tool</h1>
+							<p class="lead" style="font-size: 25px;">Please enter any series of keys and press "enter" to find the longest palindrome using Manacher's Algorithm.</p>
 						<input type="text" name="input" id="input_string">
 						<button id="confirm" onclick="process()">Enter</button>
 						<div id="container"></div>
-					  </div>
+						</div>
+						
+						<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<br>
+										<h1>Time Complexity</h1>
+									</div>
+									<div class="flip-card-back">
+										<br>
+										<br>
+										<h1>O(N)</h1>
+									</div>
+								</div>
+							</div>
+
+							<div class="flip-card" id="secondFlip">
+									<div class="flip-card-inner">
+										<div class="flip-card-front">
+											<br>
+											<h1>Space Complexity</h1>
+										</div>
+										<div class="flip-card-back">
+											<br>
+											<br>
+											<h1>O(N)</h1>
+										</div>
+									</div>
+								</div>
+
+								<div class="flip-card" id="thirdFlip">
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<br>
+												<h1>DP Time and Space Complexity</h1>
+											</div>
+											<div class="flip-card-back">
+												<br>
+												<br>
+												<h1>Time = O(N<sup>2</sup>)</h1>
+												<h1>Memory = O(1)</h1>
+											</div>
+										</div>
+									</div>
 
 		<!-- <input type="text" name="input" id="input_string">
 		<button id="confirm" onclick="process()">Enter</button>
