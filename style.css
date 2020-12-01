@@ -62,6 +62,11 @@ input {
 	color: blue;
 }
 
+#initialArray {
+	width: 50%;
+	margin:3%;
+}
+
 footer {
 	background-color: #343a40;
 	font-family: 'Righteous';
