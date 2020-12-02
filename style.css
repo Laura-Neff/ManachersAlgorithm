@@ -10,6 +10,10 @@ li {
 
 }
 
+.col{
+	border-radius: 3px;
+}
+
 body {
 	background-image: url("images/backgroundUpdate.png");
 }
@@ -28,6 +32,10 @@ h1 {
 	font-family: 'Righteous';
 }
 
+.clearfix{
+	padding:10px;
+}
+
 nav {
 	font-family: 'Righteous';
 }
@@ -38,7 +46,7 @@ nav {
 
 #Info {
 	background-image: url("images/green_dust.png");
-	width: 70%;
+	/*width: 70%;*/
 	padding: 3%;
 	/*color: chartreuse;*/
 }
@@ -91,25 +99,83 @@ footer {
 	
 }
 
+#container { 
+background-color: #e9ecef;
+}
+
+.center {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media (min-width: 992px) { 
 
 .flip-card {
 	background-color: transparent;
-	width: 300px;
-	height: 200px;
+	/* width: inherit; */
+	height:200px;
 	border: 1px solid #f1f1f1;
-	perspective: 1000px; 
-	margin: 5%;
-  }
+	perspective: 1000px;
+	padding: 0 0 0 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 16px;
+	margin-left: 5px;
+	min-width: 250px;
+	}
+
+}
+
+@media (min-width: 1200px) { 
+
+.flip-card {
+	background-color: transparent;
+	/* width: inherit; */
+	height:200px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px;
+	padding: 0 0 0 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 40px;
+	margin-left: 5px;
+	min-width: 250px;
+	}
+
+}
+
+
+
+@media (max-width: 992px) { 
+
+.flip-card {
+	background-color: transparent;
+	/* width: inherit; */
+	height:200px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px;
+	padding: 0 0 0 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+	min-width: 250px;
+	}
+
+}
   
   /* This container is needed to position the front and back side */
   .flip-card-inner {
+  	display: flex;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	text-align: center;
+	vertical-align: middle;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-  }
+	}
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
@@ -123,13 +189,13 @@ footer {
 	height: 100%;
 	-webkit-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
-  }
+	}
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
 	background-color: rgb(13, 232, 170);
 	color: white;
-  }
+	}
   
   /* Style the back side */
   .flip-card-back {

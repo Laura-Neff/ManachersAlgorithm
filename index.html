@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="Content-Type" content="text/html">
+		<!-- <meta http-equiv="Content-Type" content="text/html"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 		<title>Manacher's Algorithm</title>
 		<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,115 +12,103 @@
 
 	<body>
 	  <!-- As a heading -->
-	  <nav class="navbar navbar-dark bg-dark">
+	  <nav class="navbar navbar-default navbar-dark bg-dark">
 		<span class="navbar-brand mb-0 h1">Manacher's Algorithm</span>
 	  </nav>
-
-
-	  	<div class="row">
-			  <div class="col-lg">
             <div class="container" id="InfoContain">
-			<div class="jumbotron" id="Info">
-					<h1 class="display-4">Manacher's Algorithm</h1>
-					<p class="lead">Manacher's Algorithm finds the longest palindromic substring in O(N) time compared to O(N<sup>2</sup>) time in dynamic programming.
-						The way it reduces the number of operations performed is by doing some extra analysis when two halves of a center are equal.</p>
-						
-						<p class="lead">In dynamic programming, a variable representing the center is iterated on each element in the array and "between" each two elements in an array.
-						Palindromes are found by using the center variable to determine whether the elements on both sides of the center are the same or not for each element in the array. 
-						When we say "between", we mean that the algorithm is checking to see if the characters up to a certain iteration can be read the same backwards, 
-						rather than seeing if the elements on both sides of the center are the same.   </p>
-				
-						<img id = "initialArray" src="images/ShowArray.png">
-						
-						<p class="lead">
-								 
-						Like in dynamic programming, Manacher's Algorithm also uses a center variable for the array with the palindrome to determine whether elements are the same on both sides of it, but it does not iterate the center variable for each element in the array. When the left half is equal to the right half of a center, the right half is said to be the "mirror" of the left. 
-						 Now the center of the left half is found and the palindrome length of the newly found center is duplicated as the palindrome 
-						 length of the corresponding center on the right half. The rest of the palindrome lengths for when the center is each of the remaining
-							elements on the left half is duplicated over to the corresponding elements on the right half. </p>
-							<img id = "initialArray" src="images/Mirror.png">
-						<p class="lead">	However, this is only true when the length  of the mirror (the length of the palindrome at an index) is within the left boundary.</p>
-						<img id = "initialArray" src="images/Boundaries.png">
-						<p class="lead"> If the length of the mirror goes beyond the left boundary
-							 (say the left half is "OMOM" and the right half is "MOM"), then the palindrome lengths at each center on the right half would be equal to the 
-							 right boundary - that center's index. The center's index treats the empty spaces between each element like their own indices. 
-							 Therefore, these two techniques reduce the amount of expansions needed in finding the longest palindromic substring, thus reducing time complexity, and giving us Manacher's Algorithm. </p>
-							 <img id = "initialArray" src="images/FinalExplanation.png">
-					<hr class="my-4">
-					<p class="lead" style="color: seagreen; font-size: 30px; font-family: 'Righteous'"> Please try out our demo below, which finds the longest palindrome using Manacher's Algorithm for every input and shows you
-						each step in calculation.
-					</p>
-				  </div>
-				  </div>
-				</div>
-			</div>
+            <div class="clearfix"></div>
+			<div class="row">
+					<div class="col col-lg-10" id="Info">
+							<h1 class="display-4">Manacher's Algorithm</h1>
+							<p class="lead">Manacher's Algorithm finds the longest palindromic substring in O(N) time compared to O(N<sup>2</sup>) time in dynamic programming.
+								The way it reduces the number of operations performed is by doing some extra analysis when two halves of a center are equal.</p>
+
+								<p class="lead">In dynamic programming, a variable representing the center is iterated on each element in the array and "between" each two elements in an array.
+								Palindromes are found by using the center variable to determine whether the elements on both sides of the center are the same or not for each element in the array. 
+								When we say "between", we mean that the algorithm is checking to see if the characters up to a certain iteration can be read the same backwards, 
+								rather than seeing if the elements on both sides of the center are the same.   </p>
+
+								<img id = "initialArray" src="images/ShowArray.png">
+
+								<p class="lead">
+
+								Like in dynamic programming, Manacher's Algorithm also uses a center variable for the array with the palindrome to determine whether elements are the same on both sides of it, but it does not iterate the center variable for each element in the array. When the left half is equal to the right half of a center, the right half is said to be the "mirror" of the left. 
+								 Now the center of the left half is found and the palindrome length of the newly found center is duplicated as the palindrome 
+								 length of the corresponding center on the right half. The rest of the palindrome lengths for when the center is each of the remaining
+									elements on the left half is duplicated over to the corresponding elements on the right half. </p>
+									<img id = "initialArray" src="images/Mirror.png">
+								<p class="lead">	However, this is only true when the length  of the mirror (the length of the palindrome at an index) is within the left boundary.</p>
+								<img id = "initialArray" src="images/Boundaries.png">
+								<p class="lead"> If the length of the mirror goes beyond the left boundary
+									 (say the left half is "OMOM" and the right half is "MOM"), then the palindrome lengths at each center on the right half would be equal to the 
+									 right boundary - that center's index. The center's index treats the empty spaces between each element like their own indices. 
+									 Therefore, these two techniques reduce the amount of expansions needed in finding the longest palindromic substring, thus reducing time complexity, and giving us Manacher's Algorithm. </p>
+									 <img id = "initialArray" src="images/FinalExplanation.png">
+							<hr class="my-4">
+							<p class="lead" style="color: seagreen; font-size: 30px; font-family: 'Righteous'"> Please try out our demo below, which finds the longest palindrome using Manacher's Algorithm for every input and shows you
+								each step in calculation.
+							</p>
+						  </div> <!-- column !--> 
+				  </div> <!-- row !--> 
+
+        <div class="clearfix"></div>
 
 		<div class="row">
-			<div class="col-lg">
-				<div class="container" id="InfoContain">
-				  <div class="jumbotron" id="container">
+			<div class="col col-lg-10" id="container">
 							<h1 class="display-4">Demo Tool</h1>
 							<p class="lead" style="font-size: 25px;">Please enter any series of keys and press "enter" to find the longest palindrome using Manacher's Algorithm.</p>
 						<input type="text" name="input" id="input_string">
 						<button id="confirm" onclick="process()">Enter</button>
-						
-						</div>
+						<div class="clearfix"></div>
 				</div>
 			</div>
-		</div>
-
-		<div class="container" id="InfoContain">
 				<div class="row">
-						<div class="col-lg">
-						<div class="flip-card">
+						<div class="col col-lg-3 flip-card">
 								<div class="flip-card-inner">
 									<div class="flip-card-front">
 										<br>
 										<h1>Time Complexity</h1>
 									</div>
 									<div class="flip-card-back">
-										<br>
-										<br>
+									<p class="center">
 										<h1>O(N)</h1>
+										</p>
 									</div>
 								</div>
 							</div>
-							</div>
 							
-						<div class="col-lg">
-							<div class="flip-card" id="secondFlip">
+						<div class="col col-lg-3 flip-card" id="secondFlip">
 									<div class="flip-card-inner">
 										<div class="flip-card-front">
 											<br>
 											<h1>Space Complexity</h1>
 										</div>
 										<div class="flip-card-back">
-											<br>
-											<br>
+										<p class="center">
 											<h1>O(N)</h1>
+											</p>
 										</div>
 									</div>
 								</div>
-							</div>
 
-						<div class="col-lg">
-								<div class="flip-card" id="thirdFlip">
+						<div class="col col-lg-3 flip-card" id="thirdFlip">
 										<div class="flip-card-inner">
 											<div class="flip-card-front">
 												<br>
 												<h1>DP Time and Space Complexity</h1>
 											</div>
 											<div class="flip-card-back">
-												<br>
-												<br>
+											<p class="center">
 												<h1>Time = O(N<sup>2</sup>)</h1>
 												<h1>Memory = O(1)</h1>
+												</p>
 											</div>
 										</div>
 									</div>
 						</div>
 					</div>
 		</div>
+		<div class="clearfix"></div>
 
 		<!-- <input type="text" name="input" id="input_string">
 		<button id="confirm" onclick="process()">Enter</button>
